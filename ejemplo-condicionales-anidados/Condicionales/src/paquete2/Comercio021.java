@@ -20,6 +20,7 @@ public class Comercio021 {
         
         String nombre;
         String apellido;
+        String region;
         int edad;
         double sueldoBasico;
         int numeroProductos;
@@ -28,9 +29,8 @@ public class Comercio021 {
         double coeficiente = 0.6;
         double bono  = 0;
         
-        double porcentajeSeguro = 8;
         double adicionalSeguro;
-        
+        double porcentajeSeguro;
         double sueldoFinal; 
         
         System.out.println("Ingrese el nombre por favor");
@@ -41,7 +41,17 @@ public class Comercio021 {
         
         System.out.println("Ingrese la edad por favor");
         edad = entrada.nextInt();
+        
+        entrada.nextLine();
+        
+        System.out.println("Ingrese su región siguiendo el siguiente formato:\n"
+                + "Sierra\n"
+                + "Costa\n"
+                + "Oriente\n"
+                + "Insultar");
+        region = entrada.nextLine();
 
+        
         System.out.println("Ingrese el sueldo básico por favor");
         sueldoBasico = entrada.nextDouble();        
         
@@ -66,6 +76,29 @@ public class Comercio021 {
                     }else{
                         bono = 300;
                     }
+                }
+            }
+        }
+        
+        if (region.equals("Sierra")){
+            porcentajeSeguro = 10;
+        }else{
+            if (region.equals("Costa")){
+                porcentajeSeguro = 12;
+            }else{
+                if (region.equals("Oriente")){
+                    porcentajeSeguro = 15;
+                }else{
+                    if (region.equals("Insular")){
+                        porcentajeSeguro = 30;
+                    }else{
+                        porcentajeSeguro = 0;
+                    }
+                    /*
+                    Se coloca como porcentajeSeguro 0 el final del todo, ya que
+                    en el caso de que ninguna de las 4 regiones se cumpla, debe
+                    existir un valor para evitar que salga un error en el codigo
+                    */
                 }
             }
         }
@@ -98,3 +131,9 @@ public class Comercio021 {
     }
     
 }
+
+/*
+De acuerdo a nueva normativa el porcentaje del seguro es variable, si el 
+empleado es de la sierra el porcentaje es 10%, costa 12%, oriente 15% e 
+insular 30%. Acoplar la solución para que considere la nueva normativa 
+*/
