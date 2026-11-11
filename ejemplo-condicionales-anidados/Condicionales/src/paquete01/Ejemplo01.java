@@ -44,3 +44,10 @@ public class Ejemplo01 {
     }
 
 }
+
+/*
+Para que en pantalla salga "Trabajar con AND" un usario debe ingresar el numero
+1, ya que este numero se guardara en la variable "opcion" y se ira comparando 
+con condiciones de la linea 27, que comprobara si es valido el numero y la 
+linea 28, que comprobara que el numero sea =1 para poder mostrar el mensaje :)
+*/
