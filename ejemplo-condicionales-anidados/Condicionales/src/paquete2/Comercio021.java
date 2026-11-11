@@ -92,10 +92,10 @@ public class Comercio021 {
                     if (region.equals("Insular")){
                         porcentajeSeguro = 30;
                     }else{
-                        porcentajeSeguro = 0;
+                        porcentajeSeguro = 8;
                     }
                     /*
-                    Se coloca como porcentajeSeguro 0 el final del todo, ya que
+                    Se coloca como porcentajeSeguro 8 el final del todo, ya que
                     en el caso de que ninguna de las 4 regiones se cumpla, debe
                     existir un valor para evitar que salga un error en el codigo
                     */
